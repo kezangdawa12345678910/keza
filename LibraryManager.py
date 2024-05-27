@@ -1,43 +1,41 @@
- # Initialize empty lists,set, and dictionary 
-books_list =[]
+books_list = []
 authors_set = set()
-books_dict ={}
+books_dict = {}
 
-#add books
+books_list.append ("Python Programming")
+authors_set.add ("John Smith")
+books_dict ["Python Programming"] = "John smith"
 
-books_list.append("python progamming")
-authors_set.add ("jhon smith")
-books_dict["python progamming"]="jhon smith"
+books_list.append ("Data Structures and Algorithms")
+authors_set.add ("Jane Doe")
+books_dict ["Data Structures and Algorithms"] = "Jane Doe"
 
-books_list.append("data structures and algorithms")
-authors_set.add("jane doe")
-books_dict["data and structures and algorithms"]="jane doe"
+books_list.append ("Machine Learning Basics")
+authors_set.add ("Alice Jhonson")
+books_dict["Machine Learning Basics"] = "Alice Jhonson"
 
-books_list.append("machine learning bascis")
-authors_set.add("alice jhonson")
-books_dict["machine learning bascis "]="alice jhonson"
-
-#search for a book
-
-search_title=input("enter the title of the book to search:")
+search_title = input ("Enter the title of the book to search: ")
 if search_title in books_list:
-    print(f"book found! author:{books_dict[search_title]}")
+    print (f"Book found! Author: {books_dict[search_title]}")
 else:
-    print("sorry! book not found!")
+    print ("Book not found!")
+    
 
-#display all books
-print("list of books:")
+print ("List of the Books")
 for book in books_list:
-    print(book)
-
-# remove a book
-remove_title=input("enter the title of the book to remove or else enter skip:")
+    print (book)
+    
+remove_title =  input ("Enter the title of the book to remove: ")
 if remove_title in books_list:
-    remove_author=books_dict[remove_title]
-    books_list.remove(remove_title)
-    authors_set.remove(remove_author)
+    remove_author = books_dict[remove_title]
+    books_list.remove (remove_title)
+    authors_set.remove (remove_author)
     del books_dict[remove_title]
-    print("book removed successfully!")
-    print("books avaiable:",books_list)
+    print ("Book removed successfully!")
+    print ("Books available: ", books_dict)
+    
 else:
-    print("book not found!")
+    print("Book not found")
+    
+    
+    
